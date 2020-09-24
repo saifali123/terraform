@@ -20,3 +20,15 @@ terraform apply       #for creating infrastructure
 terraform show        #to show the created resources
 terraform state list  #to list the resources created
 ```
+
+## Change Infrastructure
+
+[Change Inftrastructure](https://learn.hashicorp.com/tutorials/terraform/aws-change)
+
+Here we have changed EC2 instance AMI-Id in which it deletes the previous instance and recreates the new one.
+
+## Destroy Infrastructure
+
+[Destroy Infrastructure](https://learn.hashicorp.com/tutorials/terraform/aws-destroy)
+
+To destroy the overall infrastructure `terraform destroy`
