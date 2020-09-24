@@ -13,7 +13,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "example" {
-  ami           = "var.amis[var.region]"
+  ami           = var.amis[var.region]
   instance_type = "t2.micro"
   #subnet_id = "subnet-23cc5b79"
   #vpc_security_group_ids = ["sg-0aea740d7f15597de"]
