@@ -18,3 +18,7 @@ resource "aws_instance" "example" {
   #subnet_id = "subnet-23cc5b79"
   #vpc_security_group_ids = ["sg-0aea740d7f15597de"]
 }
+
+output "ip" {
+  value = aws_instance.example.private_ip
+}
