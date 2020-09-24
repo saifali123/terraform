@@ -32,3 +32,17 @@ Here we have changed EC2 instance AMI-Id in which it deletes the previous instan
 [Destroy Infrastructure](https://learn.hashicorp.com/tutorials/terraform/aws-destroy)
 
 To destroy the overall infrastructure `terraform destroy`
+
+## Input Variables
+
+[Input Variables](https://learn.hashicorp.com/tutorials/terraform/aws-variables)
+
+Usage of variables in the terraform script
+
+## Query Data with Output Variables
+
+[Query Data with Output Variables](https://learn.hashicorp.com/tutorials/terraform/aws-outputs)
+
+To use the resource outputs for further queries.
+
+##
