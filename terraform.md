@@ -13,7 +13,7 @@
 
 Some Important commands used:
 
-```bash
+```shell script
 terraform init        #to initialize the current directory
 terraform fmt         #updates configurations for easy readability and consistency
 terraform apply       #for creating infrastructure
@@ -45,4 +45,9 @@ Usage of variables in the terraform script
 
 To use the resource outputs for further queries.
 
-##
+
+# YouTube - freeCodeCamp.org
+
+```shell script
+terraform plan #dry run
+```
