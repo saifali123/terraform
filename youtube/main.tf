@@ -98,9 +98,9 @@ resource "aws_instance" "terraform-naming-instance" {
   user_data = <<-EOF
               #!/bin/bash
               sudo apt update -y
-              sudo apt install nginx -y
-              sudo service nginx start
-              sudo systemctl start nginx
-              sudo echo "This is my webpage" > /var/www/html/index.html
+              sudo apt install apache2 -y
+              sudo systemctl start apache2
+              sudo bash -c 'echo This is my webpage > /var/www/html/index.html'
               EOF
 }
+
