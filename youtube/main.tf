@@ -94,14 +94,14 @@ resource "aws_security_group" "terraform-naming-sg" {
 
 resource "aws_network_interface" "terraform-naming-nic" {
   subnet_id = aws_subnet.terraform-naming-subnet-1.id
-  private_ips = ["10.0.2.50"]
+  private_ips = ["10.0.1.50"]
   security_groups = [aws_security_group.terraform-naming-sg.id]
 }
 
 resource "aws_eip" "terraform-naming-eip" {
   vpc = true
   network_interface = aws_network_interface.terraform-naming-nic.id
-  associate_with_private_ip = "10.0.2.50"
+  associate_with_private_ip = "10.0.1.50"
   depends_on = [aws_internet_gateway.terraform-naming-internetgateway]
 
 }
