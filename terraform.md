@@ -51,3 +51,5 @@ To use the resource outputs for further queries.
 ```shell script
 terraform plan #dry run
 ```
+
+The terraform shell commands will display some signs such as +(create resource), -(delete resource) and ~(modify resource).
