@@ -50,19 +50,19 @@ resource "aws_security_group" "terraform-naming-sg" {
   vpc_id = aws_vpc.terraform-naming-vpc.id
   ingress {
     from_port = 22
-    protocol = "SSH"
+    protocol = "tcp"
     to_port = 22
     cidr_blocks = ["0.0.0.0/0"]
   }
   ingress {
     from_port = 80
-    protocol = "HTTP"
+    protocol = "tcp"
     to_port = 80
     cidr_blocks = ["0.0.0.0/0"]
   }
   ingress {
     from_port = 443
-    protocol = "HTTPS"
+    protocol = "tcp"
     to_port = 443
     cidr_blocks = ["0.0.0.0/0"]
   }
