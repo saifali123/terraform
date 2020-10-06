@@ -69,3 +69,7 @@ terraform plan  #dryrun
 * To relaunch the particular resource again in the infrastructure, use `terraform apply -target -target aws_resourcename.terraform-resource-name` command
 
 * To refresh the terraform state, use `terraform refresh` command
+
+* To provide some inputs on terminals after `terraform apply`, use variables as specified in [main.tf](./youtube/main.tf)
+
+* To provide variables while executing `terraform apply`, use `terraform apply -var "subnet-cidr=10.0.1.0/24"`
