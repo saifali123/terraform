@@ -49,7 +49,15 @@ To use the resource outputs for further queries.
 # YouTube - freeCodeCamp.org
 
 ```shell script
-terraform plan #dry run
+terraform plan  #dryrun
 ```
 
-The terraform shell commands will display some signs such as +(create resource), -(delete resource) and ~(modify resource).
+* The terraform shell commands will display some signs such as +(create resource), -(delete resource) and ~(modify resource).
+
+* If we want to get rid of typing "yes" for the `terraform apply`, use `--auto-approve` flag with `terraform apply`.  Such as this `terraform apply --auto-approve`  
+
+* The declaration of resource sequence in terraform script does not matter. We can define any resource in the script first and reference its id when required, it does not matter. Because Terraform is intelligent enough to handle that behalf of us.
+
+* The .terraform folder contains the provider information, the terraform creates that folder after executing `terraform init` command. If anytime the .terrform folder gets deleted, execute the `terraform init` command again for creating that folder
+
+* The terraform.tfstate file stores the infrastructure status and resources state. Never mess with this file.
