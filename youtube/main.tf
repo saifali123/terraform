@@ -5,6 +5,7 @@ provider "aws" {
 
 resource "aws_vpc" "terraform-naming-vpc" {
   cidr_block = "10.0.0.0/16"
+  enable_dns_hostnames = "true"
   tags = {
     Name = "my-first-terraform-vpc"
   }
@@ -95,9 +96,8 @@ resource "aws_instance" "terraform-naming-instance" {
     device_index = 0
     network_interface_id = aws_network_interface.terraform-naming-nic.id
   }
-  user_data = <<-EOF
+  user_data = <<EOF
               #!/bin/bash
-              sudo -i
               sudo apt update -y
               sudo apt install apache2 -y
               sudo systemctl start apache2
