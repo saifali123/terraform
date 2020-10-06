@@ -86,7 +86,7 @@ resource "aws_eip" "terraform-naming-eip" {
 
 resource "aws_instance" "terraform-naming-instance" {
   ami = "ami-06fd8a495a537da8b"
-  instance_type = "t3.micro"
+  instance_type = "t2.micro"
   availability_zone = "eu-west-1a"
   key_name = "saif-ireland"
   tags = {
