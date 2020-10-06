@@ -70,13 +70,13 @@ terraform plan  #dryrun
 
 * To refresh the terraform state, use `terraform refresh` command
 
-* To provide some inputs on terminals after `terraform apply`, use variables as specified in [main.tf](./youtube/main.tf). The default variable file is [variable file](./youtube/variables.tf)
+* To provide some inputs on terminals after `terraform apply`, use variables as specified in [main.tf](./youtube/main.tf). The default variable file is [variable file](youtube/terraform.tfvars)
 
 * If we need to provide only input or type the string character manually on the terminal for the variable, then use `type = string` in the variable block, which is shown is this file [main.tf](./youtube/main.tf) 1st Way
 
-* If we need to specify the list of variables in the variables file which is also shown in the [variable file](./youtube/variables.tf). Also check the [main.tf](./youtube/main.tf) how we have used the list variables for the subnets cidr. 2nd Way
+* If we need to specify the list of variables in the variables file which is also shown in the [variable file](youtube/terraform.tfvars). Also check the [main.tf](./youtube/main.tf) how we have used the list variables for the subnets cidr. 2nd Way
 
-* If we need to use both strings and list at the same type for same variable see 3rd Way in both [variable file](./youtube/variables.tf) [main.tf](./youtube/main.tf) 
+* If we need to use both strings and list at the same type for same variable see 3rd Way in both [variable file](youtube/terraform.tfvars) [main.tf](./youtube/main.tf) 
 
 * To provide variables while executing `terraform apply`, use `terraform apply -var "subnet-cidr=10.0.1.0/24"`
 
