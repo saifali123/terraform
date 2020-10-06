@@ -3,9 +3,16 @@ provider "aws" {
   profile = "default"
 }
 
-variable "subnet-cidr" {
+#variable "subnet-cidr" {                      # Use this block when there is only one string variable
+#  description = "Provide Subnet CIDR"
+#  type = string
+#}
+
+variable "subnet-cidr1" {                      # Use this block when there is a list of variables
   description = "Provide Subnet CIDR"
+  #type = string
 }
+
 
 resource "aws_vpc" "terraform-naming-vpc" {
   cidr_block = "10.0.0.0/16"
@@ -36,10 +43,19 @@ resource "aws_route_table" "terraform-naming-routetable" {
 
 
 resource "aws_subnet" "terraform-naming-subnet-1" {
-  cidr_block = var.subnet-cidr
+  cidr_block = var.subnet-cidr1[0]
   vpc_id = aws_vpc.terraform-naming-vpc.id
   tags = {
     Name = "my-first-terraform-subnet-1"
+  }
+  availability_zone = "eu-west-1a"
+}
+
+resource "aws_subnet" "terraform-naming-subnet-2" {
+  cidr_block = var.subnet-cidr1[1]
+  vpc_id = aws_vpc.terraform-naming-vpc.id
+  tags = {
+    Name = "my-first-terraform-subnet-2"
   }
   availability_zone = "eu-west-1a"
 }
@@ -75,14 +91,14 @@ resource "aws_security_group" "terraform-naming-sg" {
 
 resource "aws_network_interface" "terraform-naming-nic" {
   subnet_id = aws_subnet.terraform-naming-subnet-1.id
-  private_ips = ["10.0.1.50"]
+  private_ips = ["10.0.2.50"]
   security_groups = [aws_security_group.terraform-naming-sg.id]
 }
 
 resource "aws_eip" "terraform-naming-eip" {
   vpc = true
   network_interface = aws_network_interface.terraform-naming-nic.id
-  associate_with_private_ip = "10.0.1.50"
+  associate_with_private_ip = "10.0.2.50"
   depends_on = [aws_internet_gateway.terraform-naming-internetgateway]
 
 }
