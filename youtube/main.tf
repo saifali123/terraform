@@ -26,10 +26,7 @@ resource "aws_route_table" "terraform-naming-routetable" {
     cidr_block = "0.0.0.0/0"
     gateway_id = aws_internet_gateway.terraform-naming-internetgateway.id
   }
-  route {
-    cidr_block = "::/0"
-    gateway_id = aws_internet_gateway.terraform-naming-internetgateway.id
-  }
+
 }
 
 
@@ -53,19 +50,19 @@ resource "aws_security_group" "terraform-naming-sg" {
   vpc_id = aws_vpc.terraform-naming-vpc.id
   ingress {
     from_port = 22
-    protocol = "ssh"
+    protocol = "SSH"
     to_port = 22
     cidr_blocks = ["0.0.0.0/0"]
   }
   ingress {
     from_port = 80
-    protocol = "http"
+    protocol = "HTTP"
     to_port = 80
     cidr_blocks = ["0.0.0.0/0"]
   }
   ingress {
     from_port = 443
-    protocol = "https"
+    protocol = "HTTPS"
     to_port = 443
     cidr_blocks = ["0.0.0.0/0"]
   }
