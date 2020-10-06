@@ -12,9 +12,9 @@ provider "aws" {
 #  description = "Provide Subnet CIDR"
 #}
 
-variable "subnet-cidr" {                      # Use Both  -  3rd Way
-  description = "Provide Subnet CIDR"
-}
+#variable "subnet-cidr" {                      # Use Both  -  3rd Way
+#  description = "Provide Subnet CIDR"
+#}
 
 
 resource "aws_vpc" "terraform-naming-vpc" {
