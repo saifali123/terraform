@@ -97,6 +97,7 @@ resource "aws_instance" "terraform-naming-instance" {
   }
   user_data = <<-EOF
               #!/bin/bash
+              sudo -i
               sudo apt update -y
               sudo apt install apache2 -y
               sudo systemctl start apache2
