@@ -3,14 +3,17 @@ provider "aws" {
   profile = "default"
 }
 
-#variable "subnet-cidr" {                      # Use this block when there is only one string variable
+#variable "subnet-cidr" {                      # Use this block when there is only one string variable - 1st Way
 #  description = "Provide Subnet CIDR"
 #  type = string
 #}
 
-variable "subnet-cidr1" {                      # Use this block when there is a list of variables
+#variable "subnet-cidr" {                      # Use this block when there is a list of variables  -  2nd Way
+#  description = "Provide Subnet CIDR"
+#}
+
+variable "subnet-cidr" {                      # Use Both  -  3rd Way
   description = "Provide Subnet CIDR"
-  #type = string
 }
 
 
@@ -43,7 +46,7 @@ resource "aws_route_table" "terraform-naming-routetable" {
 
 
 resource "aws_subnet" "terraform-naming-subnet-1" {
-  cidr_block = var.subnet-cidr1[0]
+  cidr_block = var.subnet-cidr[0].cidr_block
   vpc_id = aws_vpc.terraform-naming-vpc.id
   tags = {
     Name = "my-first-terraform-subnet-1"
@@ -52,7 +55,7 @@ resource "aws_subnet" "terraform-naming-subnet-1" {
 }
 
 resource "aws_subnet" "terraform-naming-subnet-2" {
-  cidr_block = var.subnet-cidr1[1]
+  cidr_block = var.subnet-cidr[1].cidr_block
   vpc_id = aws_vpc.terraform-naming-vpc.id
   tags = {
     Name = "my-first-terraform-subnet-2"
