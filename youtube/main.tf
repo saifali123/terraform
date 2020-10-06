@@ -105,3 +105,6 @@ resource "aws_instance" "terraform-naming-instance" {
               EOF
 }
 
+output "webserver-nginx-public-ip" {
+  value = aws_eip.terraform-naming-eip.public_ip
+}

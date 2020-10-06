@@ -61,3 +61,5 @@ terraform plan  #dryrun
 * The .terraform folder contains the provider information, the terraform creates that folder after executing `terraform init` command. If anytime the .terrform folder gets deleted, execute the `terraform init` command again for creating that folder
 
 * The terraform.tfstate file stores the infrastructure status and resources state. Never mess with this file.
+
+* To list all resources that are created by terraform script use `terraform state list` command. To get the details for any particular resource use `terraform state show "state-resource-name"`
