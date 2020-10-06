@@ -3,6 +3,10 @@ provider "aws" {
   profile = "default"
 }
 
+variable "subnet-cidr" {
+  description = "Provide Subnet CIDR"
+}
+
 resource "aws_vpc" "terraform-naming-vpc" {
   cidr_block = "10.0.0.0/16"
   enable_dns_hostnames = "true"
@@ -32,7 +36,7 @@ resource "aws_route_table" "terraform-naming-routetable" {
 
 
 resource "aws_subnet" "terraform-naming-subnet-1" {
-  cidr_block = "10.0.1.0/24"
+  cidr_block = var.subnet-cidr
   vpc_id = aws_vpc.terraform-naming-vpc.id
   tags = {
     Name = "my-first-terraform-subnet-1"

@@ -63,3 +63,9 @@ terraform plan  #dryrun
 * The terraform.tfstate file stores the infrastructure status and resources state. Never mess with this file.
 
 * To list all resources that are created by terraform script use `terraform state list` command. To get the details for any particular resource use `terraform state show "state-resource-name"`
+
+* To delete just the particular resource from the terraform script, use `terraform destroy -target aws_resourcename.terraform-resource-name` command
+
+* To relaunch the particular resource again in the infrastructure, use `terraform apply -target -target aws_resourcename.terraform-resource-name` command
+
+* To refresh the terraform state, use `terraform refresh` command
