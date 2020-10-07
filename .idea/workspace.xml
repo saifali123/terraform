@@ -22,9 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="20d09cfa-73b4-40f4-bf5c-6c3ee810f27f" name="Default Changelist" comment="nginx-webserver-19">
-      <change beforePath="$PROJECT_DIR$/terraform.md" beforeDir="false" afterPath="$PROJECT_DIR$/terraform.md" afterDir="false" />
-    </list>
+    <list default="true" id="20d09cfa-73b4-40f4-bf5c-6c3ee810f27f" name="Default Changelist" comment="hashicorp terraform by zeal vora" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -67,6 +65,19 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="Settings.Markdown" />
   </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -85,7 +96,7 @@
       <workItem from="1602000762220" duration="332000" />
       <workItem from="1602030842774" duration="3782000" />
       <workItem from="1602037097577" duration="279000" />
-      <workItem from="1602037631207" duration="1081000" />
+      <workItem from="1602037631207" duration="1462000" />
     </task>
     <task id="LOCAL-00001" summary="providers and variables added">
       <created>1600744159392</created>
@@ -325,7 +336,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601957541726</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="hashicorp terraform by zeal vora">
+      <created>1602038974938</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1602038974938</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -344,7 +362,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="statefile" />
     <MESSAGE value="youtube-1" />
     <MESSAGE value="youtube-2" />
     <MESSAGE value="youtube-3" />
@@ -369,7 +386,8 @@
     <MESSAGE value="nginx-webserver-17" />
     <MESSAGE value="nginx-webserver-18" />
     <MESSAGE value="nginx-webserver-19" />
-    <option name="LAST_COMMIT_MESSAGE" value="nginx-webserver-19" />
+    <MESSAGE value="hashicorp terraform by zeal vora" />
+    <option name="LAST_COMMIT_MESSAGE" value="hashicorp terraform by zeal vora" />
   </component>
   <component name="WindowStateProjectService">
     <state x="459" y="471" key="#Notifications" timestamp="1602001302839">
@@ -392,17 +410,21 @@
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="697" y="304" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1920.1057@0.23.1920.1057" timestamp="1601956932896" />
-    <state x="336" y="101" key="SettingsEditor" timestamp="1602037273057">
+    <state x="336" y="61" key="SettingsEditor" timestamp="1602039396289">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="336" y="101" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1602037273057" />
+    <state x="336" y="61" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1602039396289" />
     <state x="448" y="121" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1601940679063" />
-    <state x="560" y="297" key="Vcs.Push.Dialog.v2" timestamp="1601957546532">
-      <screen x="0" y="23" width="1920" height="1057" />
+    <state x="420" y="233" key="Vcs.Push.Dialog.v2" timestamp="1602038981535">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="420" y="233" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1600909939983" />
+    <state x="420" y="233" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1602038981535" />
     <state x="560" y="280" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1601941274951" />
     <state x="560" y="297" key="Vcs.Push.Dialog.v2/0.23.1920.1057@0.23.1920.1057" timestamp="1601957546532" />
+    <state x="532" y="370" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602039367918">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="532" y="370" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1602039367918" />
     <state x="469" y="201" width="672" height="564" key="search.everywhere.popup" timestamp="1602038182126">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
