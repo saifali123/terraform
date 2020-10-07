@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="6cdda80d-db82-4ad7-9f41-31c911771209" name="vmware-fusion">
+        <fileTransfer rootFolder="/home/ubuntu" accessType="SFTP" host="vmware" port="22" sshConfigId="b36aba8d-ab82-448b-97f0-ab7b7929fec8" sshConfig="ubuntu@vmware:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
