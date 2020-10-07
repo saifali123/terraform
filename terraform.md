@@ -157,3 +157,13 @@ digraph Test {
     * *Third-Party providers must be manually installed,* since terraform init cannot automatically download them.
     * Install third-party providers by placing their plugin executables in the user plugins directory(~/.terraform.d/plugins).
     
+
+# Chapter 4: Read, Generate, Modify Configurations
+
+## Attributes and Output Values
+
+* Terraform has the capability to output the attribute of a resource with the output values.
+
+* An outputed attribute cannot only be used for the user reference but it can also act as a input to other resources being created via terraform.
+
+* For example: After EIP(Elastic IP Address) gets created, its IP address should automatically get whitelisted in the security group.
