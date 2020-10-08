@@ -22,21 +22,30 @@ output "s3" {
 }
 */
 
-resource "aws_eip" "terraform-eip" {
-  vpc = true
-}
 
+resource "aws_security_group" "terraformsg" {
+  ingress {
+    from_port = 80
+    protocol = "tcp"
+    to_port = 80
+  }
+  ingress {
+    from_port = 22
+    protocol = "tcp"
+    to_port = 22
+    cidr_blocks = var.myip
+  }
+  tags = {
+    Name: newsg
+  }
+}
 
 resource "aws_instance" "terraformec2" {
   ami = "ami-08a2aed6e0a6f9c7d"
   instance_type = "t2.micro"
+  security_groups = [aws_security_group.terraformsg.id]
 }
 
-resource "aws_eip_association" "terraformeipassoction" {
-  instance_id = aws_instance.terraformec2.id
-  allocation_id = aws_eip.terraform-eip.id
-}
-
-output "awsec2-publicip" {
-  value = aws_eip_association.terraformeipassoction.public_ip
+output "myip" {
+  value = var.myip
 }
