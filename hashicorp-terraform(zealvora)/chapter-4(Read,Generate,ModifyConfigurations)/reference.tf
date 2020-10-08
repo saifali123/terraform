@@ -44,7 +44,7 @@ resource "aws_security_group" "terraformsg" {
 resource "aws_instance" "terraformec2" {
   ami = "ami-08a2aed6e0a6f9c7d"
   instance_type = "t2.micro"
-  security_groups = aws_security_group.terraformsg.id
+  security_groups = aws_security_group.terraformsg.name
 }
 
 #output "myip" {
