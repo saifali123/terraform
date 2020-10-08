@@ -167,3 +167,11 @@ digraph Test {
 * An outputed attribute cannot only be used for the user reference but it can also act as a input to other resources being created via terraform.
 
 * For example: After EIP(Elastic IP Address) gets created, its IP address should automatically get whitelisted in the security group.
+
+## Variables
+
+* Repeated static values can create more work in the future.
+
+![Variables](./hashicorp-terraform(zealvora)/videos-screenshots/variables.png)
+
+* We can have a central source from which we can import the values from.
