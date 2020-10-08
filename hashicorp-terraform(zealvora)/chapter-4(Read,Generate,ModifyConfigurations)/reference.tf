@@ -22,10 +22,6 @@ output "s3" {
 }
 */
 
-resource "aws_eip" "terraformeip" {
-  vpc = true
-}
-
 resource "aws_eip" "terraform-eip" {
   vpc = true
 }
