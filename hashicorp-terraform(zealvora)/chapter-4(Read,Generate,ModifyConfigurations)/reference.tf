@@ -34,7 +34,7 @@ resource "aws_security_group" "terraformsg" {
     from_port = 22
     protocol = "tcp"
     to_port = 22
-    cidr_blocks = ["${var.publicip}/32"]
+    cidr_blocks = ["${var.publicip.saif}/32"]
   }
   tags = {
     Name: "new-sg"

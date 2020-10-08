@@ -1,4 +1,4 @@
 variable "publicip" {
-  default = "37.228.236.38"
+  saif = "37.228.236.38"
 }
 
