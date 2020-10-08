@@ -3,6 +3,11 @@ provider "aws" {
   region = "eu-west-1"
 }
 
+variable "myip" {                      # Use this block when there is only one string variable - 1st Way
+  description = "myip"
+  type = string
+}
+
 # attributes.tf
 /*
 resource "aws_eip" "terraform-eip" {
