@@ -37,7 +37,7 @@ resource "aws_security_group" "terraformsg" {
     cidr_blocks = ["${var.publicip}/32"]
   }
   tags = {
-    Name: newsg
+    Name: "new-sg"
   }
 }
 
