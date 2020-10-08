@@ -1,4 +1,4 @@
 variable "publicip" {
-  sg-cidr = "37.228.236.38"
+  default = "37.228.236.38"
 }
 
