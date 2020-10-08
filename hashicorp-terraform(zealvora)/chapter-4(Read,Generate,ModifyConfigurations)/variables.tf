@@ -1,4 +1,6 @@
 variable "publicip" {
-  saif = "37.228.236.38"
+  default = {
+    "myip" = "37.228.236.38"
+  }
 }
 
