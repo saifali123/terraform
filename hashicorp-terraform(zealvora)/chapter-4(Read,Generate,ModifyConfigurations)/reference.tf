@@ -40,3 +40,7 @@ resource "aws_eip_association" "terraformeipassoction" {
   instance_id = aws_instance.terraformec2.id
   allocation_id = aws_eip.terraform-eip.id
 }
+
+output "awsec2-publicip" {
+  value = aws_instance.terraformec2.public_ip
+}
