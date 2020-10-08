@@ -1,1 +1,4 @@
-myips = "37.228.236.38/32"
+variable "publicip" {
+  sg-cidr = "37.228.236.38"
+}
+

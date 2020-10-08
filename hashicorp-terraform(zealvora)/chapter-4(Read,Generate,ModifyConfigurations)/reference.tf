@@ -3,10 +3,6 @@ provider "aws" {
   region = "eu-west-1"
 }
 
-variable "myip" {                      # Use this block when there is only one string variable - 1st Way
-  description = "myip"
-  type = string
-}
 
 # attributes.tf
 /*
@@ -38,7 +34,7 @@ resource "aws_security_group" "terraformsg" {
     from_port = 22
     protocol = "tcp"
     to_port = 22
-    cidr_blocks = var.myip
+    cidr_blocks = ["${var.publicip}/32"]
   }
   tags = {
     Name: newsg
@@ -51,6 +47,6 @@ resource "aws_instance" "terraformec2" {
   security_groups = [aws_security_group.terraformsg.id]
 }
 
-output "myip" {
-  value = var.myip
-}
+#output "myip" {
+#  value = var.publicip
+#}
