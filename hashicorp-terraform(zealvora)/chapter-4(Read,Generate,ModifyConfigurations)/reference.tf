@@ -38,5 +38,5 @@ resource "aws_eip_association" "terraformeipassoction" {
 }
 
 output "awsec2-publicip" {
-  value = aws_instance.terraformec2.public_ip
+  value = aws_eip_association.terraformeipassoction.public_ip
 }
