@@ -44,9 +44,12 @@ resource "aws_security_group" "terraformsg" {
 resource "aws_instance" "terraformec2" {
   ami = "ami-08a2aed6e0a6f9c7d"
   instance_type = "t2.micro"
-  security_groups = aws_security_group.terraformsg.name
 }
 
+resource "aws_network_interface_sg_attachment" "terrformsgattachment" {
+  network_interface_id = aws_instance.terraformec2.primary_network_interface_id
+  security_group_id = aws_security_group.terraformsg.id
+}
 #output "myip" {
 #  value = var.publicip
 #}
